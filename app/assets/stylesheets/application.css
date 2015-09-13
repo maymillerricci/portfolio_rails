@@ -43,7 +43,7 @@ img#wizard {
 }
 
 div#header.section h1 a {
-  font-family: 'Ribeye';
+  font-family: "Ribeye";
   color: white;
   font-size: 1.2em;
   float: left;
@@ -58,7 +58,7 @@ h2 {
 }
 
 #sidebar, #main_content, #footer {
-  font-family: 'Donegal One';
+  font-family: "Donegal One";
 }
 
 #sidebar {
