@@ -43,11 +43,11 @@ img#wizard {
 }
 
 div#header.section h1 a {
-  font-family: "Ribeye";
+  font-family: "Ribeye", cursive;
   color: white;
   font-size: 1.2em;
   float: left;
-  margin: 10px 0px 0px 20px;
+  margin: 10px 0 0 20px;
 }
 
 h2 {
@@ -58,7 +58,7 @@ h2 {
 }
 
 #sidebar, #main_content, #footer {
-  font-family: "Donegal One";
+  font-family: "Donegal One", serif;
 }
 
 #sidebar {
@@ -101,7 +101,7 @@ div.active a {
 }
 
 div.active#home {
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 0 0;
 }
 
 a:hover, #header.section h1 a:hover {
@@ -118,14 +118,14 @@ li {
 }
 
 #main_content p {
-  margin: 10px 10px 0px;
+  margin: 10px 10px 0;
   font-size: 1.2em;
   padding: 10px 35px 10px 15px;
 }
 
 .fix_height {
   height: 80px;
-  padding: 10px 0px 0px 0px;
+  padding: 10px 0 0;
 }
 
 #main_content p.clear {
@@ -150,7 +150,7 @@ li {
 }
 
 h3.project_title {
-  margin: 20px 0px 0px 20px;
+  margin: 20px 0 0 20px;
   text-decoration: underline;
   font-size: 1.3em;
   clear: both;
