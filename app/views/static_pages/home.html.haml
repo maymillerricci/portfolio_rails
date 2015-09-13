@@ -5,16 +5,14 @@
   = image_tag "red.png", class: "ninja to_sepia", alt: "red belt ninja"
   = image_tag "black.png", class: "ninja to_sepia", alt: "black belt ninja"
   %p.clear
-    My name is May, and I'm currently learning web development at
-    %a{:href => "http://www.codingdojo.co", :target => "_blank"} Coding Dojo
-    programming bootcamp.  I'm learning HTML, CSS, jQuery, JavaScript, PHP, MySQL, Ajax, OOP, MVC, CodeIgniter, Ruby on Rails, and more.
+    My name is May, and I'm a web developer. I completed
+    = link_to "Coding Dojo", "http://www.codingdojo.com", target: "_blank"
+    programming bootcamp in fall, 2013, where I learned HTML, CSS, jQuery, PHP, MySQL, Ajax, CodeIgniter, and Ruby on Rails. My current focus is on Ruby on Rails.
   %p.clear
     Check out the
-    %a{:href => "about.php"} About
+    = link_to "About", about_path
     section for some links about me, read my
-    = succeed "," do
-      %a{:href => "http://www.maymillerricci.wordpress.com", :target => "_blank"} Blog
+    = link_to "Blog", "http://www.maymillerricci.wordpress.com", target: "_blank"
     or take a look at the projects in my
-    = succeed "." do
-      %a{:href => "portfolio.php"} Portfolio
+    = link_to "Portfolio", portfolio_path
   %p.clear Thanks for stopping by!
