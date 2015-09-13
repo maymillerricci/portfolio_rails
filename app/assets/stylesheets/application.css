@@ -13,3 +13,161 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.section {
+  border-radius: 10px;
+  margin: 10px;
+}
+
+#header {
+  background-color: #3C13AF;
+  padding: 10px;
+}
+
+#header {
+  height: 80px;
+}
+
+img#wizard {
+  float: left;
+}
+
+div#header.section h1 a {
+  font-family: 'Ribeye';
+  color: white;
+  font-size: 1.2em;
+  float: left;
+  margin: 10px 0px 0px 20px;
+}
+
+h2 {
+  margin: 40px 40px 20px 45px;
+  float: left;
+  font-size: 1.6em;
+  text-decoration: underline;
+}
+
+#sidebar, #main_content, #footer {
+  font-family: 'Donegal One';
+}
+
+#sidebar {
+  width: 150px;
+  height: 560px;
+  background-color: #015C65;
+  float: left;
+  margin-bottom: 20px;
+}
+
+#main_content {
+  width: 770px;
+  height: 560px;
+  background-color: #6D89D5;
+  float: right;
+}
+
+#footer {
+  background-color: gray;
+  height: 70px;
+  clear: both;
+}
+
+#header a {
+  text-decoration: none;
+}
+
+a {
+  color: white;
+}
+
+div.active {
+  background-color: white;
+  width: 144px;
+  border: 3px solid #015C65;
+}
+
+div.active a {
+  color: #015C65;
+}
+
+div.active#home {
+  border-radius: 10px 10px 0px 0px;
+}
+
+a:hover, #header.section h1 a:hover {
+  color: #FFBC00;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 10px;
+  font-size: 1.3em;
+}
+
+#main_content p {
+  margin: 10px 10px 0px;
+  font-size: 1.2em;
+  padding: 10px 35px 10px 15px;
+}
+
+.fix_height {
+  height: 80px;
+  padding: 10px 0px 0px 0px;
+}
+
+#main_content p.clear {
+  clear: both;
+}
+
+#main_content img {
+  float: left;
+  margin: 10px;
+  height: 80px;
+  clear: both;
+}
+
+#main_content img.ninja {
+  float: left;
+  clear: none;
+  padding: 5px 20px;
+}
+
+#footer p {
+  padding: 20px;
+}
+
+h3.project_title {
+  margin: 20px 0px 0px 20px;
+  text-decoration: underline;
+  font-size: 1.3em;
+  clear: both;
+}
+
+div#main_content p.project_link, div#main_content p.project_explanation {
+  padding: 0;
+}
+
+div#main_content p.project_explanation {
+  font-size: 1em;
+  padding-bottom: 10px;
+  float: left;
+  width: 550px;
+  margin-left: 2px;
+}
+
+div#main_content div.fix_height a img.to_sepia.no_margin_top {
+  margin-top: 2px;
+}
