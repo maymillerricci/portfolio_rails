@@ -1,1 +1,20 @@
-HEADER
+#wrapper
+  #header.section
+    %a{:href => "index.php"}
+      %img#wizard.to_sepia{:alt => "wizard icon", :src => "assets/images/wizard.png"}
+    %h1
+      %a{:href => "index.php"} May Miller-Ricci
+  #sidebar.section
+    %ul
+      #home.main_link
+        %li
+          %a{:href => "index.php"} Home
+      #about.main_link
+        %li
+          %a#about.main_link{:href => "about.php"} About
+      #blog.main_link
+        %li
+          %a{:href => "http://www.maymillerricci.wordpress.com", :target => "_blank"} Blog
+      #portfolio.main_link
+        %li
+          %a#portfolio.main_link{:href => "portfolio.php"} Portfolio
