@@ -5,9 +5,6 @@ class StaticPagesController < ApplicationController
   def about
   end
 
-  def blog
-  end
-
   def portfolio
   end
 end
