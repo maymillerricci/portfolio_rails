@@ -1,14 +1,14 @@
 #wrapper
   #header.section
-    %a{:href => "index.php"}
-      %img#wizard.to_sepia{:alt => "wizard icon", :src => "assets/images/wizard.png"}
+    = link_to root_path do
+      = image_tag "wizard.png", class: "to_sepia", id: "wizard"
     %h1
-      %a{:href => "index.php"} May Miller-Ricci
+      = link_to "May Miller-Ricci", root_path
   #sidebar.section
     %ul
       #home.main_link
         %li
-          %a{:href => "index.php"} Home
+          = link_to "Home", root_path
       #about.main_link
         %li
           %a#about.main_link{:href => "about.php"} About
