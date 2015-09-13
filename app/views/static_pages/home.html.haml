@@ -1,20 +1,20 @@
 .section#main_content
   %h2 Welcome!
-  %img.ninja.to_sepia{:alt => "yellow belt ninja", :src => "assets/images/yellow.png"}
-    %img.ninja.to_sepia{:alt => "green belt ninja", :src => "assets/images/green.png"}
-      %img.ninja.to_sepia{:alt => "red belt ninja", :src => "assets/images/red.png"}
-        %img.ninja.to_sepia{:alt => "black belt ninja", :src => "assets/images/black.png"}
-          %p.clear
-            My name is May, and I'm currently learning web development at
-            %a{:href => "http://www.codingdojo.co", :target => "_blank"} Coding Dojo
-            programming bootcamp.  I'm learning HTML, CSS, jQuery, JavaScript, PHP, MySQL, Ajax, OOP, MVC, CodeIgniter, Ruby on Rails, and more.
-          %p.clear
-            Check out the
-            %a{:href => "about.php"} About
-            section for some links about me, read my
-            = succeed "," do
-              %a{:href => "http://www.maymillerricci.wordpress.com", :target => "_blank"} Blog
-            or take a look at the projects in my
-            = succeed "." do
-              %a{:href => "portfolio.php"} Portfolio
-          %p.clear Thanks for stopping by!
+  = image_tag "yellow.png", class: "ninja to_sepia", alt: "yellow belt ninja"
+  = image_tag "green.png", class: "ninja to_sepia", alt: "green belt ninja"
+  = image_tag "red.png", class: "ninja to_sepia", alt: "red belt ninja"
+  = image_tag "black.png", class: "ninja to_sepia", alt: "black belt ninja"
+  %p.clear
+    My name is May, and I'm currently learning web development at
+    %a{:href => "http://www.codingdojo.co", :target => "_blank"} Coding Dojo
+    programming bootcamp.  I'm learning HTML, CSS, jQuery, JavaScript, PHP, MySQL, Ajax, OOP, MVC, CodeIgniter, Ruby on Rails, and more.
+  %p.clear
+    Check out the
+    %a{:href => "about.php"} About
+    section for some links about me, read my
+    = succeed "," do
+      %a{:href => "http://www.maymillerricci.wordpress.com", :target => "_blank"} Blog
+    or take a look at the projects in my
+    = succeed "." do
+      %a{:href => "portfolio.php"} Portfolio
+  %p.clear Thanks for stopping by!
