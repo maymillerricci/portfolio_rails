@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  get 'projects/canvas_draw'
-
-  get 'projects/periodic_table'
-
-  get 'projects/countries'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -14,6 +9,10 @@ Rails.application.routes.draw do
   get "/about", to: "static_pages#about"
   get "/blog", to: "static_pages#blog"
   get "/portfolio", to: "static_pages#portfolio"
+
+  get "/projects/canvas_draw"
+  get "/projects/periodic_table"
+  get "/projects/countries"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
