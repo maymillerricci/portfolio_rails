@@ -1,3 +1,447 @@
 // Place all the styles related to the Projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#periodic-table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: sans-serif;
+  #page-wrapper {
+    background-color: #F0F0F0;
+    width: 1040px;
+    height: 720px;
+    margin: 0 auto;
+  }
+  #groups-1-2, #groups-1-2 div, #groups-3-18 div, .lanth-act div, #groups-margin, div.margin, #groups-3-18, #periods-margin, #lanth-act-wrapper div.lanth-act-label {
+    float: left;
+  }
+  #groups-1-2 {
+    width: 164px;
+  }
+  #groups-1-2, #groups-margin, #groups-3-18 {
+    height: 526px;
+  }
+  #groups-1-2 div, #groups-3-18 div, .lanth-act div {
+    width: 47px;
+    height: 62px;
+    margin: 2px;
+    border: 1px solid #B8B8B8;
+  }
+  #groups-1-2 div.transparent, #groups-3-18 div.transparent, .lanth-act div.transparent {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  p, h4 {
+    text-align: center;
+    padding: 2px 0px;
+  }
+  p {
+    font-size: .9em;
+  }
+  h4 {
+    font-size: 1.2em;
+    color: #330066;
+  }
+  .small {
+    font-size: .75em;
+  }
+  .label, .star {
+    color: #980000;
+    font-size: 1em;
+    margin-top: 20px;
+  }
+  .label-double {
+    margin-top: 5px;
+    line-height: 25px;
+  }
+  #groups-1-2 div {
+    background-color: rgb(104, 155, 255);
+  }
+  #groups-margin {
+    width: 25px;
+  }
+  div.margin {
+    width: 20px;
+    height: 62px;
+    margin: 2px;
+  }
+  #groups-3-18 {
+    width: 850px;
+  }
+  #groups-3-18 div {
+    background-color: rgb(249, 154, 151);
+  }
+  #groups-3-18 div.yellow {
+    background-color: rgb(249, 204, 0);
+  }
+  #periods-margin {
+    width: 1040px;
+    height: 35px;
+  }
+  #lanth-act-wrapper div.lanth-act-label {
+    width: 164px;
+    height: 62px;
+  }
+  .lanth-act div {
+    background-color: rgb(46, 202, 33);
+  }
+
+  /*add jmol hover*/
+  #H:hover {
+    background-color: #FFFFFF;
+  }
+  .yellow#He:hover {
+    background-color: #D9FFFF;
+  }
+  #Li:hover {
+    background-color: #CC80FF;
+  }
+  #Be:hover {
+    background-color: #C2FF00;
+  }
+  .yellow#B:hover {
+    background-color: #FFB5B5;
+  }
+  .yellow#C:hover {
+    background-color: #909090;
+  }
+  .yellow#N:hover {
+    background-color: #3050F8;
+  }
+  .yellow#O:hover {
+    background-color: #FF0D0D;
+  }
+  .yellow#F:hover {
+    background-color: #90E050;
+  }
+  .yellow#Ne:hover {
+    background-color: #B3E3F5;
+  }
+  #Na:hover {
+    background-color: #AB5CF2;
+  }
+  #Mg:hover {
+    background-color: #8AFF00;
+  }
+  .yellow#Al:hover {
+    background-color: #BFA6A6;
+  }
+  .yellow#Si:hover {
+    background-color: #F0C8A0;
+  }
+  .yellow#P:hover {
+    background-color: #FF8000;
+  }
+  .yellow#S:hover {
+    background-color: #FFFF30;
+  }
+  .yellow#Cl:hover {
+    background-color: #1FF01F;
+  }
+  .yellow#Ar:hover {
+    background-color: #80D1E3;
+  }
+  #K:hover {
+    background-color: #8F40D4;
+  }
+  #Ca:hover {
+    background-color: #3DFF00;
+  }
+  #Sc:hover {
+    background-color: #E6E6E6;
+  }
+  #Ti:hover {
+    background-color: #BFC2C7;
+  }
+  #V:hover {
+    background-color: #A6A6AB;
+  }
+  #Cr:hover {
+    background-color: #8A99C7;
+  }
+  #Mn:hover {
+    background-color: #9C7AC7;
+  }
+  #Fe:hover {
+    background-color: #E06633;
+  }
+  #Co:hover {
+    background-color: #F090A0;
+  }
+  #Ni:hover {
+    background-color: #50D050;
+  }
+  #Cu:hover {
+    background-color: #C88033;
+  }
+  #Zn:hover {
+    background-color: #7D80B0;
+  }
+  .yellow#Ga:hover {
+    background-color: #C28F8F;
+  }
+  .yellow#Ge:hover {
+    background-color: #668F8F;
+  }
+  .yellow#As:hover {
+    background-color: #BD80E3;
+  }
+  .yellow#Se:hover {
+    background-color: #FFA100;
+  }
+  .yellow#Br:hover {
+    background-color: #A62929;
+  }
+  .yellow#Kr:hover {
+    background-color: #5CB8D1;
+  }
+  #Rb:hover {
+    background-color: #702EB0;
+  }
+  #Sr:hover {
+    background-color: #00FF00;
+  }
+  #Y:hover {
+    background-color: #94FFFF;
+  }
+  #Zr:hover {
+    background-color: #94E0E0;
+  }
+  #Nb:hover {
+    background-color: #73C2C9;
+  }
+  #Mo:hover {
+    background-color: #54B5B5;
+  }
+  #Tc:hover {
+    background-color: #3B9E9E;
+  }
+  #Ru:hover {
+    background-color: #248F8F;
+  }
+  #Rh:hover {
+    background-color: #0A7D8C;
+  }
+  #Pd:hover {
+    background-color: #006985;
+  }
+  #Ag:hover {
+    background-color: #C0C0C0;
+  }
+  #Cd:hover {
+    background-color: #FFD98F;
+  }
+  .yellow#In:hover {
+    background-color: #A67573;
+  }
+  .yellow#Sn:hover {
+    background-color: #668080;
+  }
+  .yellow#Sb:hover {
+    background-color: #9E63B5;
+  }
+  .yellow#Te:hover {
+    background-color: #D47A00;
+  }
+  .yellow#I:hover {
+    background-color: #940094;
+  }
+  .yellow#Xe:hover {
+    background-color: #429EB0;
+  }
+  #Cs:hover {
+    background-color: #57178F;
+  }
+  #Ba:hover {
+    background-color: #00C900;
+  }
+  #Lu:hover {
+    background-color: #00AB24;
+  }
+  #Hf:hover {
+    background-color: #4DC2FF;
+  }
+  #Ta:hover {
+    background-color: #4DA6FF;
+  }
+  #W:hover {
+    background-color: #2194D6;
+  }
+  #Re:hover {
+    background-color: #267DAB;
+  }
+  #Os:hover {
+    background-color: #266696;
+  }
+  #Ir:hover {
+    background-color: #175487;
+  }
+  #Pt:hover {
+    background-color: #D0D0E0;
+  }
+  #Au:hover {
+    background-color: #FFD123;
+  }
+  #Hg:hover {
+    background-color: #B8B8D0;
+  }
+  .yellow#Tl:hover {
+    background-color: #A6544D;
+  }
+  .yellow#Pb:hover {
+    background-color: #575961;
+  }
+  .yellow#Bi:hover {
+    background-color: #9E4FB5;
+  }
+  .yellow#Po:hover {
+    background-color: #AB5C00;
+  }
+  .yellow#At:hover {
+    background-color: #754F45;
+  }
+  .yellow#Rn:hover {
+    background-color: #428296;
+  }
+  #Fr:hover {
+    background-color: #420066;
+  }
+  #Ra:hover {
+    background-color: #007D00;
+  }
+  #Lr:hover {
+    background-color: #C70066;
+  }
+  #Rf:hover {
+    background-color: #CC0059;
+  }
+  #Db:hover {
+    background-color: #D1004F;
+  }
+  #Sg:hover {
+    background-color: #D90045;
+  }
+  #Bh:hover {
+    background-color: #E00038;
+  }
+  #Hs:hover {
+    background-color: #E6002E;
+  }
+  #Mt:hover {
+    background-color: #EB0026;
+  }
+  #Ds:hover {
+    background-color: #EB0026;
+  }
+  #Rg:hover {
+    background-color: #EB0026;
+  }
+  #Cn:hover {
+    background-color: #EB0026;
+  }
+  .yellow#Uut:hover {
+    background-color: #EB0026;
+  }
+  .yellow#Fl:hover {
+    background-color: #EB0026;
+  }
+  .yellow#Uup:hover {
+    background-color: #EB0026;
+  }
+  .yellow#Lv:hover {
+    background-color: #EB0026;
+  }
+  .yellow#Uus:hover {
+    background-color: #EB0026;
+  }
+  .yellow#Uuo:hover {
+    background-color: #EB0026;
+  }
+  #La:hover {
+    background-color: #70D4FF;
+  }
+  #Ce:hover {
+    background-color: #FFFFC7;
+  }
+  #Pr:hover {
+    background-color: #D9FFC7;
+  }
+  #Nd:hover {
+    background-color: #C7FFC7;
+  }
+  #Pm:hover {
+    background-color: #A3FFC7;
+  }
+  #Sm:hover {
+    background-color: #8FFFC7;
+  }
+  #Eu:hover {
+    background-color: #61FFC7;
+  }
+  #Gd:hover {
+    background-color: #45FFC7;
+  }
+  #Tb:hover {
+    background-color: #30FFC7;
+  }
+  #Dy:hover {
+    background-color: #1FFFC7;
+  }
+  #Ho:hover {
+    background-color: #00FF9C;
+  }
+  #Er:hover {
+    background-color: #00E675;
+  }
+  #Tm:hover {
+    background-color: #00D452;
+  }
+  #Yb:hover {
+    background-color: #00BF38;
+  }
+  #Ac:hover {
+    background-color: #70ABFA;
+  }
+  #Th:hover {
+    background-color: #00BAFF;
+  }
+  #Pa:hover {
+    background-color: #00A1FF;
+  }
+  #U:hover {
+    background-color: #008FFF;
+  }
+  #Np:hover {
+    background-color: #0080FF;
+  }
+  #Pu:hover {
+    background-color: #006BFF;
+  }
+  #Am:hover {
+    background-color: #545CF2;
+  }
+  #Cm:hover {
+    background-color: #785CE3;
+  }
+  #Bk:hover {
+    background-color: #8A4FE3;
+  }
+  #Cf:hover {
+    background-color: #A136D4;
+  }
+  #Es:hover {
+    background-color: #B31FD4;
+  }
+  #Fm:hover {
+    background-color: #B31FBA;
+  }
+  #Md:hover {
+    background-color: #B30DA6;
+  }
+  #No:hover {
+    background-color: #BD0D87;
+  }
+  .ui-tooltip-content {
+    font-size: .7em;
+  }
+}
