@@ -1,2 +1,599 @@
-%h1 Projects#periodic_table
-%p Find me in app/views/projects/periodic_table.html.haml
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title Periodic Table
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body#periodic-table
+    #page-wrapper
+      #groups-1-2
+        .transparent
+          %p.label.label-double Group Period
+        .transparent
+          %p.label 1
+        .transparent
+          %p.label 2
+        .transparent
+          %p.label 1
+        #H{:title => "Hydrogen"}
+          %p 1
+          %h4 H
+          %p.small 1.006
+        .transparent
+        .transparent
+          %p.label 2
+        #Li{:title => "Lithium"}
+          %p 3
+          %h4 Li
+          %p.small 6.94
+        #Be{:title => "Beryllium"}
+          %p 4
+          %h4 Be
+          %p.small 9.0122
+        .transparent
+          %p.label 3
+        #Na{:title => "Sodium"}
+          %p 11
+          %h4 Na
+          %p.small 22.990
+        #Mg{:title => "Magnesium"}
+          %p 12
+          %h4 Mg
+          %p.small 24.305
+        .transparent
+          %p.label 4
+        #K{:title => "Potassium"}
+          %p 19
+          %h4 K
+          %p.small 39.098
+        #Ca{:title => "Calcium"}
+          %p 20
+          %h4 Ca
+          %p.small 40.078
+        .transparent
+          %p.label 5
+        #Rb{:title => "Rubidium"}
+          %p 37
+          %h4 Rb
+          %p.small 85.468
+        #Sr{:title => "Strontium"}
+          %p 38
+          %h4 Sr
+          %p.small 87.62
+        .transparent
+          %p.label 6
+        #Cs{:title => "Cesium"}
+          %p 55
+          %h4 Cs
+          %p.small 132.91
+        #Ba{:title => "Barium"}
+          %p 56
+          %h4 Ba
+          %p.small 137.33
+        .transparent
+          %p.label 7
+        #Fr{:title => "Francium"}
+          %p 87
+          %h4 Fr
+          %p.small [223.02]
+        #Ra{:title => "Radium"}
+          %p 88
+          %h4 Ra
+          %p.small [226.03]
+      #groups-margin
+        .margin.transparent
+        .margin.transparent
+        .margin.transparent
+        .margin.transparent
+        .margin.transparent
+        .margin.transparent
+        .margin.transparent
+          %p.star *
+        .margin.transparent
+          %p.star **
+      #groups-3-18
+        .transparent
+          %p.label 3
+        .transparent
+          %p.label 4
+        .transparent
+          %p.label 5
+        .transparent
+          %p.label 6
+        .transparent
+          %p.label 7
+        .transparent
+          %p.label 8
+        .transparent
+          %p.label 9
+        .transparent
+          %p.label 10
+        .transparent
+          %p.label 11
+        .transparent
+          %p.label 12
+        .transparent
+          %p.label 13
+        .transparent
+          %p.label 14
+        .transparent
+          %p.label 15
+        .transparent
+          %p.label 16
+        .transparent
+          %p.label 17
+        .transparent
+          %p.label 18
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        #He.yellow{:title => "Helium"}
+          %p 2
+          %h4 He
+          %p.small 4.0026
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        #B.yellow{:title => "Boron"}
+          %p 5
+          %h4 B
+          %p.small 10.81
+        #C.yellow{:title => "Carbon"}
+          %p 6
+          %h4 C
+          %p.small 12.011
+        #N.yellow{:title => "Nitrogen"}
+          %p 7
+          %h4 N
+          %p.small 14.007
+        #O.yellow{:title => "Oxygen"}
+          %p 8
+          %h4 O
+          %p.small 15.999
+        #F.yellow{:title => "Fluorine"}
+          %p 9
+          %h4 F
+          %p.small 18.998
+        #Ne.yellow{:title => "Neon"}
+          %p 10
+          %h4 Ne
+          %p.small 20.180
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        .transparent
+        #Al.yellow{:title => "Aluminum"}
+          %p 13
+          %h4 Al
+          %p.small 26.982
+        #Si.yellow{:title => "Silicon"}
+          %p 14
+          %h4 Si
+          %p.small 28.085
+        #P.yellow{:title => "Phosphorus"}
+          %p 15
+          %h4 P
+          %p.small 30.974
+        #S.yellow{:title => "Sulfur"}
+          %p 16
+          %h4 S
+          %p.small 32.06
+        #Cl.yellow{:title => "Chlorine"}
+          %p 17
+          %h4 Cl
+          %p.small 35.45
+        #Ar.yellow{:title => "Argon"}
+          %p 18
+          %h4 Ar
+          %p.small 39.938
+        #Sc{:title => "Scandium"}
+          %p 21
+          %h4 Sc
+          %p.small 44.956
+        #Ti{:title => "Titanium"}
+          %p 22
+          %h4 Ti
+          %p.small 47.867
+        #V{:title => "Vanadium"}
+          %p 23
+          %h4 V
+          %p.small 50.942
+        #Cr{:title => "Chromium"}
+          %p 24
+          %h4 Cr
+          %p.small 51.996
+        #Mn{:title => "Manganese"}
+          %p 25
+          %h4 Mn
+          %p.small 54.938
+        #Fe{:title => "Iron"}
+          %p 26
+          %h4 Fe
+          %p.small 55.845
+        #Co{:title => "Cobalt"}
+          %p 27
+          %h4 Co
+          %p.small 58.933
+        #Ni{:title => "Nickel"}
+          %p 28
+          %h4 Ni
+          %p.small 58.693
+        #Cu{:title => "Copper"}
+          %p 29
+          %h4 Cu
+          %p.small 63.546
+        #Zn{:title => "Zinc"}
+          %p 30
+          %h4 Zn
+          %p.small 65.38
+        #Ga.yellow{:title => "Gallium"}
+          %p 31
+          %h4 Ga
+          %p.small 69.723
+        #Ge.yellow{:title => "Germanium"}
+          %p 32
+          %h4 Ge
+          %p.small 72.63
+        #As.yellow{:title => "Arsenic"}
+          %p 33
+          %h4 As
+          %p.small 74.922
+        #Se.yellow{:title => "Selenium"}
+          %p 34
+          %h4 Se
+          %p.small 78.96
+        #Br.yellow{:title => "Bromine"}
+          %p 35
+          %h4 Br
+          %p.small 79.904
+        #Kr.yellow{:title => "Krypton"}
+          %p 36
+          %h4 Kr
+          %p.small 83.798
+        #Y{:title => "Yttrium"}
+          %p 39
+          %h4 Y
+          %p.small 88.906
+        #Zr{:title => "Zirconium"}
+          %p 40
+          %h4 Zr
+          %p.small 91.224
+        #Nb{:title => "Niobium"}
+          %p 41
+          %h4 Nb
+          %p.small 92.906
+        #Mo{:title => "Molybdenum"}
+          %p 42
+          %h4 Mo
+          %p.small 95.96
+        #Tc{:title => "Technetium"}
+          %p 43
+          %h4 Tc
+          %p.small [97.91]
+        #Ru{:title => "Ruthenium"}
+          %p 44
+          %h4 Ru
+          %p.small 101.07
+        #Rh{:title => "Rhodium"}
+          %p 45
+          %h4 Rh
+          %p.small 102.91
+        #Pd{:title => "Palladium"}
+          %p 46
+          %h4 Pd
+          %p.small 106.42
+        #Ag{:title => "Silver"}
+          %p 47
+          %h4 Ag
+          %p.small 107.87
+        #Cd{:title => "Cadmium"}
+          %p 48
+          %h4 Cd
+          %p.small 112.41
+        #In.yellow{:title => "Indium"}
+          %p 49
+          %h4 In
+          %p.small 114.82
+        #Sn.yellow{:title => "Tin"}
+          %p 50
+          %h4 Sn
+          %p.small 118.71
+        #Sb.yellow{:title => "Antimony"}
+          %p 51
+          %h4 Sb
+          %p.small 121.76
+        #Te.yellow{:title => "Tellurium"}
+          %p 52
+          %h4 Te
+          %p.small 127.60
+        #I.yellow{:title => "Iodine"}
+          %p 53
+          %h4 I
+          %p.small 126.90
+        #Xe.yellow{:title => "Xenon"}
+          %p 54
+          %h4 Xe
+          %p.small 131.29
+        #Lu{:title => "Lutetium"}
+          %p 71
+          %h4 Lu
+          %p.small 174.97
+        #Hf{:title => "Hafnium"}
+          %p 72
+          %h4 Hf
+          %p.small 178.49
+        #Ta{:title => "Tantalum"}
+          %p 73
+          %h4 Ta
+          %p.small 180.95
+        #W{:title => "Tungsten"}
+          %p 74
+          %h4 W
+          %p.small 183.84
+        #Re{:title => "Rhenium"}
+          %p 75
+          %h4 Re
+          %p.small 186.21
+        #Os{:title => "Osmium"}
+          %p 76
+          %h4 Os
+          %p.small 190.23
+        #Ir{:title => "Iridium"}
+          %p 77
+          %h4 Ir
+          %p.small 192.22
+        #Pt{:title => "Platinum"}
+          %p 78
+          %h4 Pt
+          %p.small 195.08
+        #Au{:title => "Gold"}
+          %p 79
+          %h4 Au
+          %p.small 196.97
+        #Hg{:title => "Mercury"}
+          %p 80
+          %h4 Hg
+          %p.small 200.59
+        #Tl.yellow{:title => "Thallium"}
+          %p 81
+          %h4 Tl
+          %p.small 204.38
+        #Pb.yellow{:title => "Lead"}
+          %p 82
+          %h4 Pb
+          %p.small 207.2
+        #Bi.yellow{:title => "Bismuth"}
+          %p 83
+          %h4 Bi
+          %p.small 208.98
+        #Po.yellow{:title => "Polonium"}
+          %p 84
+          %h4 Po
+          %p.small [208.98]
+        #At.yellow{:title => "Astatine"}
+          %p 85
+          %h4 At
+          %p.small [209.99]
+        #Rn.yellow{:title => "Radon"}
+          %p 86
+          %h4 Rn
+          %p.small [222.02]
+        #Lr{:title => "Lawrencium"}
+          %p 103
+          %h4 Lr
+          %p.small [262.11]
+        #Rf{:title => "Rutherfordium"}
+          %p 104
+          %h4 Rf
+          %p.small [265.12]
+        #Db{:title => "Dubnium"}
+          %p 105
+          %h4 Db
+          %p.small [268.13]
+        #Sg{:title => "Seaborgium"}
+          %p 106
+          %h4 Sg
+          %p.small [271.13]
+        #Bh{:title => "Bohrium"}
+          %p 107
+          %h4 Bh
+          %p.small [270]
+        #Hs{:title => "Hassium"}
+          %p 108
+          %h4 Hs
+          %p.small [277.15]
+        #Mt{:title => "Meitnerium"}
+          %p 109
+          %h4 Mt
+          %p.small [276.15]
+        #Ds{:title => "Darmstadtium"}
+          %p 110
+          %h4 Ds
+          %p.small [281.16]
+        #Rg{:title => "Roentgenium"}
+          %p 111
+          %h4 Rg
+          %p.small [280.16]
+        #Cn{:title => "Coper­nicium"}
+          %p 112
+          %h4 Cn
+          %p.small [285.17]
+        #Uut.yellow{:title => "Ununtrium"}
+          %p 113
+          %h4 Uut
+          %p.small [284.18]
+        #Fl.yellow{:title => "Flerov­ium"}
+          %p 114
+          %h4 Fl
+          %p.small [289.19]
+        #Uup.yellow{:title => "Ununpentium"}
+          %p 115
+          %h4 Uup
+          %p.small [288.19]
+        #Lv.yellow{:title => "Liver­morium"}
+          %p 116
+          %h4 Lv
+          %p.small [293]
+        #Uus.yellow{:title => "Ununseptium"}
+          %p 117
+          %h4 Uus
+          %p.small [294]
+        #Uuo.yellow{:title => "Ununoctium"}
+          %p 118
+          %h4 Uuo
+          %p.small [294]
+      #periods-margin
+      #lanth-act-wrapper
+        .lanth-act-label
+          %p.label *Lanthanoids
+        .margin.transparent
+          %p.star *
+        .lanth-act
+          #La{:title => "Lanthanum"}
+            %p 57
+            %h4 La
+            %p.small 138.91
+          #Ce{:title => "Cerium"}
+            %p 58
+            %h4 Ce
+            %p.small 140.12
+          #Pr{:title => "Praseodymium"}
+            %p 59
+            %h4 Pr
+            %p.small 140.91
+          #Nd{:title => "Neodymium"}
+            %p 60
+            %h4 Nd
+            %p.small 144.24
+          #Pm{:title => "Promethium"}
+            %p 61
+            %h4 Pm
+            %p.small [144.91]
+          #Sm{:title => "Samarium"}
+            %p 62
+            %h4 Sm
+            %p.small 150.36
+          #Eu{:title => "Europium"}
+            %p 63
+            %h4 Eu
+            %p.small 151.96
+          #Gd{:title => "Gadolinium"}
+            %p 64
+            %h4 Gd
+            %p.small 157.25
+          #Tb{:title => "Terbium"}
+            %p 65
+            %h4 Tb
+            %p.small 158.93
+          #Dy{:title => "Dysprosium"}
+            %p 66
+            %h4 Dy
+            %p.small 162.50
+          #Ho{:title => "Holmium"}
+            %p 67
+            %h4 Ho
+            %p.small 164.93
+          #Er{:title => "Erbium"}
+            %p 68
+            %h4 Er
+            %p.small 167.26
+          #Tm{:title => "Thulium"}
+            %p 69
+            %h4 Tm
+            %p.small 168.93
+          #Yb{:title => "Ytterbium"}
+            %p 70
+            %h4 Yb
+            %p.small 173.05
+          .transparent
+          .transparent
+        .lanth-act-label
+          %p.label **Actinoids
+        .margin.transparent
+          %p.star **
+        .lanth-act
+          #Ac{:title => "Actinium"}
+            %p 89
+            %h4 Ac
+            %p.small [227.03]
+          #Th{:title => "Thorium"}
+            %p 90
+            %h4 Th
+            %p.small [232.04]
+          #Pa{:title => "Protactinium"}
+            %p 91
+            %h4 Pa
+            %p.small [231.04]
+          #U{:title => "Uranium"}
+            %p 92
+            %h4 U
+            %p.small [238.03]
+          #Np{:title => "Neptunium"}
+            %p 93
+            %h4 Np
+            %p.small [237.05]
+          #Pu{:title => "Plutonium"}
+            %p 94
+            %h4 Pu
+            %p.small [244.06]
+          #Am{:title => "Americium"}
+            %p 95
+            %h4 Am
+            %p.small [243.06]
+          #Cm{:title => "Curium"}
+            %p 96
+            %h4 Cm
+            %p.small [247.07]
+          #Bk{:title => "Berkelium"}
+            %p 97
+            %h4 Bk
+            %p.small [247.07]
+          #Cf{:title => "Californium"}
+            %p 98
+            %h4 Cf
+            %p.small [251.08]
+          #Es{:title => "Einsteinium"}
+            %p 99
+            %h4 Es
+            %p.small [252.08]
+          #Fm{:title => "Fermium"}
+            %p 100
+            %h4 Fm
+            %p.small [257.10]
+          #Md{:title => "Mendelevium"}
+            %p 101
+            %h4 Md
+            %p.small [258.10]
+          #No{:title => "Nobelium"}
+            %p 102
+            %h4 No
+            %p.small [259.10]
+          .transparent
+          .transparent
