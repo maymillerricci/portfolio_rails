@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'projects/canvas_draw'
+
+  get 'projects/periodic_table'
+
+  get 'projects/countries'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
