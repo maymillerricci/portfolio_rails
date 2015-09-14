@@ -1,2 +1,30 @@
-%h1 StaticPages#portfolio
-%p Find me in app/views/static_pages/portfolio.html.haml
+.section#main_content
+  %h3.project_title Canvas Drawing:
+  .fix_height
+    %a{:href => "http://mathcanvas.herokuapp.com/", :target => "_blank"}
+      %img.to_sepia.no_margin_top{:alt => "math canvas logo", :src => "assets/images/mathcanvaslogo.png"}
+    %p.project_link
+      %a{:href => "http://mathcanvas.herokuapp.com", :target => "_blank"} Math Canvas
+    %p.project_explanation Site where students can draw out solutions to math problems, using artwork to illustrate their individual thinking processes.  Created in Ruby on Rails, integrating my HTML5 canvas and jQuery drawing app.
+  .fix_height
+    %a{:href => "http://www.maymillerricci.com/canvas_draft1.html", :target => "_blank"}
+      %img.to_sepia.no_margin_top{:alt => "canvas", :src => "assets/images/canvas.png"}
+    %p.project_link
+      %a{:href => "http://www.maymillerricci.com/canvas_draft1.html", :target => "_blank"} First Draft of Drawing App
+    %p.project_explanation Created using HTML5 canvas, jQuery, jQuery UI, and jQuery mobile to also work on touchscreen devices.
+  %h3.project_title Here are a few of my favorite assignments from Coding Dojo:
+  .fix_height
+    %a{:href => "projects/periodic_table", :target => "_blank"}
+      %img.to_sepia.no_margin_top{:alt => "periodic table", :src => "assets/images/periodic_table.png"}
+    %p.project_link
+      %a{:href => "projects/periodic_table", :target => "_blank"} Periodic Table of the Elements
+    %p.project_explanation
+      Recreated from scratch using HTML, CSS, and jQuery.  Hover over each element to see its name and
+      = succeed "." do
+        %a{:href => "http://jmol.sourceforge.net/jscolors/#Jmol colors", :target => "_blank"} JMOL color
+  .fix_height
+    %a{:href => "projects/countries", :target => "_blank"}
+      %img.to_sepia.no_margin_top{:alt => "country info", :src => "assets/images/earth.png"}
+    %p.project_link
+      %a{:href => "projects/countries", :target => "_blank"} Countries of the World
+    %p.project_explanation Country information form using Ajax.
