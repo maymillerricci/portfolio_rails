@@ -10,4 +10,11 @@ class ProjectsController < ApplicationController
   def countries
     @countries = ISO3166::Country.all.map(&:name).sort
   end
+
+  def country_data
+    @country = ISO3166::Country.find_country_by_name('united states')
+    respond_to do |format|
+      format.json { render json: @country }
+    end
+  end
 end

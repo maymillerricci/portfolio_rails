@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "/projects/canvas_draw"
   get "/projects/periodic_table"
   get "/projects/countries"
+  post "/projects/country_data"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
