@@ -4,11 +4,9 @@ $(document).on('submit', '#country_form', function() {
       $(this).attr('action'),
       $(this).serialize(),
       function(data) {
-        //var unknown = "this.src=''";
         $('#country_info').html(
             "<h2>Country Information</h2>" +
-            //"<img src='/app/assets/images/flags/" + data.name + ".png' onerror=" + unknown + ">" +
-            "<img src='" + data.asset_path + "'>" +
+            "<img src='" + data.asset_path + "' alt='" + data.name + " flag'>" +
             "<p>Country: " + data.name + "</p>" +
             "<p>Continent: " + data.continent + "</p>" +
             "<p>Region: " + data.subregion + "</p>" +
