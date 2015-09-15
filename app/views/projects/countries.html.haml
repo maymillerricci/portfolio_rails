@@ -1,2 +1,17 @@
-%h1 Projects#countries
-%p Find me in app/views/projects/countries.html.haml
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title Countries of the World
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body#countries
+    #wrapper
+      %h1 Countries of the World
+      %p Select a country below to view information about it.
+      %form#dropdown_form{:action => "process.php", :method => "post"}
+      %form#country_form{:action => "process.php", :method => "post"}
+        %label{:for => "country"} Country:
+        %select#dropdown{:name => "country"}
+      #country_info
