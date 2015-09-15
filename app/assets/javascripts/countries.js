@@ -9,12 +9,11 @@ $(document).on('submit', '#country_form', function() {
         $('#country_info').html(
             "<h2>Country Information</h2>" +
             //"<img src='assets/images/flags/" + data['country_info']['name'] + ".png' onerror=" + unknown + ">" +
-            "<p>Country: " + data['name'] + "</p>" +
-            "<p>Continent: " + data['country_info']['continent'] + "</p>" +
-            "<p>Region: " + data['country_info']['region'] + "</p>" +
-            "<p>Population: " + data['country_info']['population'] + "</p>" +
-            "<p>Life Expectancy: " + data['country_info']['lifeexpectancy'] + "</p>" +
-            "<p>Government Form: " + data['country_info']['governmentform'] + "</p>");
+            "<p>Country: " + data.data.name + "</p>" +
+            "<p>Continent: " + data.data.continent + "</p>" +
+            "<p>Region: " + data.data.subregion + "</p>" +
+            "<p>Nationality: " + data.data.nationality + "</p>" +
+            "<p>Currency: " + data.data.currency + "</p>");
       },
       "json"
   );
