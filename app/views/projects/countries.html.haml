@@ -10,7 +10,7 @@
     #wrapper
       %h1 Countries of the World
       %p Select a country below to view information about it.
-      %form#country_form{:action => "country_data", :method => "post"}
+      %form#country_form{action: "country_data"}
         %label{for: "country"} Country:
         %select#dropdown{name: "country"}
           - @countries.each do |country|
