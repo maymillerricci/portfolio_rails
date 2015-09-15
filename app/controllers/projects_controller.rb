@@ -8,5 +8,6 @@ class ProjectsController < ApplicationController
   end
 
   def countries
+    @countries = ISO3166::Country.all.map(&:name).sort
   end
 end

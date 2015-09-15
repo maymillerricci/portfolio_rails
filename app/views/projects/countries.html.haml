@@ -12,6 +12,9 @@
       %p Select a country below to view information about it.
       %form#dropdown_form{:action => "process.php", :method => "post"}
       %form#country_form{:action => "process.php", :method => "post"}
-        %label{:for => "country"} Country:
-        %select#dropdown{:name => "country"}
+        %label{for: "country"} Country:
+        %select#dropdown{name: "country"}
+          - @countries.each do |country|
+            %option
+              = country
       #country_info
