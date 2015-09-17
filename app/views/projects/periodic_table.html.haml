@@ -6,6 +6,12 @@
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
+    :javascript
+      $(function() {
+        $(document).tooltip();
+        $( 'div').tooltip({ position: {my: "left+10 center", at: "right center"} });
+      });
+
   %body#periodic-table
     #page-wrapper
       #groups-1-2
