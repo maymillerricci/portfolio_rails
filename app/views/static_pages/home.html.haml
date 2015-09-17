@@ -12,7 +12,9 @@
     Check out the
     = link_to "About", about_path
     section for some links about me, read my
-    = link_to "Blog", "http://www.maymillerricci.wordpress.com", target: "_blank"
+    = succeed "," do
+      = link_to "Blog", "http://www.maymillerricci.wordpress.com", target: "_blank"
     or take a look at the projects in my
-    = link_to "Portfolio", portfolio_path
+    = succeed "." do
+      = link_to "Portfolio", portfolio_path
   %p.clear Thanks for stopping by!
