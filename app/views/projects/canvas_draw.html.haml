@@ -1,2 +1,311 @@
-%h1 Projects#canvas_draw
-%p Find me in app/views/projects/canvas_draw.html.haml
+<!doctype html>
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "UTF-8"}
+      %title May's Canvas
+      %link{:href => "https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.css", :rel => "stylesheet"}
+        %link{:href => "assets/css/canvas.css", :rel => "stylesheet"}
+          %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+          %script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"}
+          %script{:src => "https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.js"}
+          %script{:src => "assets/js/touch_punch.js"}
+          :javascript
+            //set all variables
+            var canvasWidth = 600;
+            var canvasHeight = 400;
+            var clickX = new Array();
+            var clickY = new Array();
+            var clickDrag = new Array();
+            var paint;
+            var colorPurple = '#660099';
+            var colorBlue = '#3333CC';
+            var colorGreen = '#336633';
+            var colorYellow = '#FFFF33';
+            var colorPink = '#CC0099';
+            var clickColor = new Array();
+            var curColor = null;
+            var clickSize = new Array();
+            var curSize = null;
+            var clickTool = new Array();
+            var curTool = null;
+            var clickAlpha = new Array();
+            var curAlpha = null;
+
+            $(document).ready(function() {
+
+            	function initialize() {
+            		curColor = colorPurple;
+            		curSize = 10;
+            		curTool = 'marker';
+            		curAlpha = 1;
+
+            		//remove and set borders on default options on page load or clear
+            		$('.choice').removeClass('highlight');
+            		$('#purple, #normal, #marker').addClass('highlight');
+
+            		//load images in stamp picker
+            		$('#img1').append("");
+            		$('#img2').append("");
+            		$('#img3').append("");
+            		$('#img4').append("");
+            		$('#img5').append("");
+            		$('#img6').append("");
+            		$('#img7').append("");
+            		$('#img8').append("");
+            		$('#img9').append("");
+            		$('#img10').append("");
+            		$(".draggable").draggable();
+            	}
+
+            	//set 2d context
+            	context = document.getElementById('canvas').getContext('2d');
+
+            	//set height and width of canvas
+            	$('#canvas').attr({
+            		width: canvasWidth,
+            		height: canvasHeight
+            	});
+
+            	initialize();
+
+            	//drawing - on mousedown
+            	$(document).on('vmousedown', '#canvas', function(e) {
+            		e.preventDefault();
+            		var mouseX = e.pageX - this.offsetLeft;
+            		var mouseY = e.pageY - this.offsetTop;
+            		paint = true;
+            		addClick(mouseX, mouseY);
+            		redraw();
+            	});
+            		
+            	//drawing - on mousemove
+            	$(document).on('vmousemove', '#canvas', function(e) {
+            		e.preventDefault();
+            		if(paint) {
+            			var mouseX = e.pageX - this.offsetLeft;
+            			var mouseY = e.pageY - this.offsetTop;
+            			addClick(mouseX, mouseY, true);
+            			redraw();
+            		}
+            	});
+
+            	//drawing - on mouseup
+            	$(document).on('vmouseup', '#canvas', function(e) {
+            		e.preventDefault();
+            		paint = false;
+            	});
+
+            	//drawing - on mouse leaving the canvas
+            	$(document).on('mouseleave', '#canvas', function(e) {
+            		paint = false;
+            	});
+
+            	$(document).on('vclick', '#canvas', function(e) {
+            		e.preventDefault();
+            	});
+
+            	//drawing - on mouse re-entering the canvas - WORK ON THIS!!!?
+            	// $(document).on('mouseenter', '#canvas', function(e) {
+            	// 	paint = true;
+            	// });
+
+            	//add click function
+            	function addClick(x, y, dragging)
+            	{
+            		if(curTool == "eraser") {
+            			curColor = "white";
+            		}	
+            		clickX.push(x);
+            		clickY.push(y);
+            		clickDrag.push(dragging);
+            		clickColor.push(curColor);
+            		clickSize.push(curSize);
+            		// clickTool.push(curTool);
+            		clickAlpha.push(curAlpha);
+            	}
+
+            	//redraw function
+            	function redraw() {
+            		context.clearRect(0, 0, canvasWidth, canvasHeight);
+            		context.lineJoin = "round";
+            		for(var i=0; i<clickX.length; i++) {
+            			context.beginPath();
+            			if(clickDrag[i] && i) {
+            				context.moveTo(clickX[i-1], clickY[i-1]);
+            			} else {
+            				context.moveTo(clickX[i]-1, clickY[i]);
+            			}
+            			context.lineTo(clickX[i], clickY[i]);
+            			context.closePath();
+            			context.strokeStyle = clickColor[i];
+            			context.lineWidth = clickSize[i];
+            			context.globalAlpha = clickAlpha[i];
+            			context.stroke();
+            		}
+            	}
+
+            	//add highlight class for border
+            	function highlight(choice) {
+            		var choice_class = choice.attr('class').substr(7,10);
+            		$('.' + choice_class).removeClass('highlight');
+            		$(choice).addClass('highlight');
+            	}
+
+            	$(document).on('vclick', '.choice_col', function() {
+            		if(curTool == 'eraser') {
+            			curTool = 'marker';
+            			$('#eraser').removeClass('highlight');
+            			$('#marker').addClass('highlight');
+            		}
+            	});
+
+            	//change current color when click on colors in color picker
+            	$(document).on('vclick', '#purple', function() {
+            		curColor = colorPurple;
+            		highlight($(this));
+            	});
+            	$(document).on('vclick', '#blue', function() {
+            		curColor = colorBlue;
+            		highlight($(this));
+            	});
+            	$(document).on('vclick', '#green', function() {
+            		curColor = colorGreen;
+            		highlight($(this));
+            	});
+            	$(document).on('vclick', '#yellow', function() {
+            		curColor = colorYellow;
+            		highlight($(this));
+            	});
+            	$(document).on('vclick', '#pink', function() {
+            		curColor = colorPink;
+            		highlight($(this));
+            	});
+
+            	//change current font weight when click on options in font weight picker
+            	$(document).on('vclick', '#small', function() {
+            		curSize = 4;
+            		highlight($(this));
+            	});
+            	$(document).on('vclick', '#normal', function() {
+            		curSize = 10;
+            		highlight($(this));
+            	});
+            	$(document).on('vclick', '#large', function() {
+            		curSize = 17;
+            		highlight($(this));
+            	});
+            	$(document).on('vclick', '#huge', function() {
+            		curSize = 23;
+            		highlight($(this));
+            	});
+
+            	//change current tool when click on options in tool picker
+            	$(document).on('vclick', '#marker', function() {
+            		curTool = 'marker';
+            		curAlpha = 1;
+            		if(curColor == 'white') {
+            			curColor = colorPurple;
+            		}
+            		highlight($(this));
+            	});
+            	$(document).on('vclick', '#crayon', function() {
+            		curTool = 'crayon';
+            		curAlpha = 0.4;
+            		if(curColor == 'white') {
+            			curColor = colorPurple;
+            		}
+            		highlight($(this));
+            	});
+            	$(document).on('vclick', '#eraser', function() {
+            		curTool = 'eraser';
+            		curAlpha = 1;
+            		highlight($(this));
+            		$('.choice_col').removeClass('highlight');
+            	});
+
+            	// //change color of font weight options depending on current color - use this or not???
+            	// $(document).on('vclick', '.choice_col', function() {
+            	// 	if(curColor==colorPurple) {
+            	// 		$('.line').css('background-color', colorPurple);
+            	// 	} else if(curColor==colorBlue) {
+            	// 		$('.line').css('background-color', colorBlue);
+            	// 	} else if(curColor==colorGreen) {
+            	// 		$('.line').css('background-color', colorGreen);
+            	// 	} else if(curColor==colorYellow) {
+            	// 		$('.line').css('background-color', colorYellow);
+            	// 	} else if(curColor==colorPink) {
+            	// 		$('.line').css('background-color', colorPink);
+            	// 	}
+            	// });
+
+            	//draggable - make stamps draggable and when one is dragged replace with new one
+            	$(document).on('vmousedown', '.new_stamp', function() {
+            		$(this).removeClass('new_stamp');
+            		var img_path = $(this).attr('src');
+            		var stamp_id = $(this).parent().attr('id');
+            		$('#' + stamp_id).append("");
+            		$(".draggable").draggable();
+            	});
+            	
+            	//clear canvas when click clear button (confirm first)
+            	$(document).on('click', '#clear', function() {
+            		if(confirm('Are you sure you want to clear the canvas?')) {
+            			clearCanvas();
+            		}
+            	});
+
+            	//clear canvas function - clears canvas and resets all arrays
+            	function clearCanvas()
+            	{
+            		context.clearRect(0, 0, canvasWidth, canvasHeight);
+            		clickX.length = 0;
+            		clickY.length = 0;
+            		clickDrag.length = 0;
+            		clickColor.length = 0;
+            		clickSize.length = 0;
+            		clickAlpha.length = 0;
+            		$('.draggable').remove();
+            		initialize();
+            	}
+            });
+    %body
+    / canvas
+    %canvas#canvas
+    / color picker
+    .picker
+      #purple.choice.choice_col
+      #blue.choice.choice_col
+      #green.choice.choice_col
+      #yellow.choice.choice_col
+      #pink.choice.choice_col
+      %button#clear Clear
+    / font weight picker
+    .picker
+      #small.choice.choice_wgt
+        #line_small.line
+      #normal.choice.choice_wgt
+        #line_normal.line
+      #large.choice.choice_wgt
+        #line_large.line
+      #huge.choice.choice_wgt
+        #line_huge.line
+    / tool picker
+    .picker
+      #marker.choice.choice_tol
+        %img{:alt => "marker", :src => "assets/images/marker.png"}/
+      #crayon.choice.choice_tol
+        %img{:alt => "crayon", :src => "assets/images/crayon.png"}/
+      #eraser.choice.choice_tol
+        %img{:alt => "eraser", :src => "assets/images/eraser.png"}/
+    / stamps
+    #drag_picker
+      #img1.img
+      #img2.img
+      #img3.img
+      #img4.img
+      #img5.img
+      #img6.img
+      #img7.img
+      #img8.img
+      #img9.img
+      #img10.img
