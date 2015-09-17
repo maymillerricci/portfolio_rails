@@ -45,17 +45,7 @@
           $('.choice').removeClass('highlight');
           $('#purple, #normal, #marker').addClass('highlight');
 
-          //load images in stamp picker
-          $('#img1').append("<img class='draggable new_stamp' src='assets/images/butterfly.png' alt='butterfly'>");
-          $('#img2').append("<img class='draggable new_stamp' src='assets/images/apple.png' alt='apple'>");
-          $('#img3').append("<img class='draggable new_stamp' src='assets/images/goldfish.png' alt='goldfish'>");
-          $('#img4').append("<img class='draggable new_stamp' src='assets/images/sun.png' alt='sun'>");
-          $('#img5').append("<img class='draggable new_stamp' src='assets/images/tree.png' alt='tree'>");
-          $('#img6').append("<img class='draggable new_stamp' src='assets/images/earth.png' alt='earth'>");
-          $('#img7').append("<img class='draggable new_stamp' src='assets/images/octopus.png' alt='octopus'>");
-          $('#img8').append("<img class='draggable new_stamp' src='assets/images/teddybear.png' alt='teddybear'>");
-          $('#img9').append("<img class='draggable new_stamp' src='assets/images/ninja.png' alt='ninja'>");
-          $('#img10').append("<img class='draggable new_stamp' src='assets/images/whale.png' alt='whale'>");
+          //draggable
           $(".draggable").draggable();
         }
 
@@ -303,12 +293,22 @@
     / stamps
     #drag_picker
       #img1.img
+        = image_tag "canvas/butterfly.png", alt: "butterfly", class: "draggable new_stamp"
       #img2.img
+        = image_tag "canvas/apple.png", alt: "apple", class: "draggable new_stamp"
       #img3.img
+        = image_tag "canvas/goldfish.png", alt: "goldfish", class: "draggable new_stamp"
       #img4.img
+        = image_tag "canvas/sun.png", alt: "sun", class: "draggable new_stamp"
       #img5.img
+        = image_tag "canvas/tree.png", alt: "tree", class: "draggable new_stamp"
       #img6.img
+        = image_tag "canvas/earth.png", alt: "earth", class: "draggable new_stamp"
       #img7.img
+        = image_tag "canvas/octopus.png", alt: "octopus", class: "draggable new_stamp"
       #img8.img
+        = image_tag "canvas/teddybear.png", alt: "teddybear", class: "draggable new_stamp"
       #img9.img
+        = image_tag "canvas/ninja.png", alt: "ninja", class: "draggable new_stamp"
       #img10.img
+        = image_tag "canvas/whale.png", alt: "whale", class: "draggable new_stamp"
