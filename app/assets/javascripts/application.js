@@ -15,3 +15,10 @@
 //= require jquery-ui/tooltip
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  var username = "maymillerricci";
+  var hostname = "gmail.com";
+  var linktext = username + "@" + hostname ;
+  $("#contact_me").attr("href", "mail" + "to:" + username + "@" + hostname).append(linktext);
+});
