@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/about", to: "static_pages#about"
   get "/blog", to: "static_pages#blog"
   get "/portfolio", to: "static_pages#portfolio"
+  get "/portfolio_techdegree", to: "static_pages#portfolio_techdegree"
 
   get "/projects/canvas_draw"
   get "/projects/periodic_table"

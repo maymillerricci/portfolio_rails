@@ -1,0 +1,10 @@
+.section#main_content
+  %h3.project_title Techdegree:
+  .fix_height
+    = link_to "http://mathcanvas.herokuapp.com/", target: "_blank" do
+      = image_tag "mathcanvaslogo.png", alt: "math canvas", class: "no_margin_top"
+    %p.project_link
+      = link_to "Math Canvas", "http://mathcanvas.herokuapp.com", target: "_blank"
+    %p.project_explanation Site where students can draw out solutions to math problems, using artwork to illustrate their individual thinking processes.  Created in Ruby on Rails, integrating my HTML5 canvas and jQuery drawing app.
+  = link_to "&#8592; Previous".html_safe, portfolio_path, class: "button previous"
+

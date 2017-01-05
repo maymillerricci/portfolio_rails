@@ -7,4 +7,7 @@ class StaticPagesController < ApplicationController
 
   def portfolio
   end
+
+  def portfolio_techdegree
+  end
 end

@@ -98,7 +98,8 @@ a {
 div.active {
   background-color: white;
   width: 144px;
-  border: 3px solid #015C65;
+  border-left: 3px solid #015C65;
+  border-right: 3px solid #015C65;
 }
 
 div.active a {
@@ -106,7 +107,12 @@ div.active a {
 }
 
 div.active#home {
+  border-top: 3px solid #015C65;
   border-radius: 10px 10px 0 0;
+}
+
+div#home:not(.active) {
+  margin-top: 3px;
 }
 
 a:hover, #header.section h1 a:hover {
@@ -118,8 +124,9 @@ ul {
 }
 
 li {
-  padding: 10px;
+  padding: 16px;
   font-size: 1.3em;
+  text-align: center;
 }
 
 #main_content p {
@@ -175,4 +182,29 @@ div#main_content p.project_explanation {
 
 div#main_content div.fix_height a img.no_margin_top {
   margin-top: 2px;
+}
+
+.button {
+  background: #3C13AF;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 20px;
+  box-shadow: 2px 2px 2px 2px gray;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #4B22BE;
+  color: white;
+}
+
+.next {
+  float: right;
+  margin-right: 50px;
+}
+
+.previous {
+  float: left;
+  margin-left: 30px;
+  margin-top: 20px;
 }
