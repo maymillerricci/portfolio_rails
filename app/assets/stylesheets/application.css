@@ -95,7 +95,7 @@ a {
   color: white;
 }
 
-div.active {
+#sidebar div.active {
   background-color: white;
   width: 144px;
   border-left: 3px solid #015C65;

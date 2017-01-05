@@ -23,4 +23,7 @@ class ProjectsController < ApplicationController
       format.json { render json: @country }
     end
   end
+
+  def tic_tac_toe
+  end
 end
