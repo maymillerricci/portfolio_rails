@@ -3,11 +3,11 @@
     Here are a few of my favorite projects from Treehouse's
     = link_to "Full Stack JavaScript Techdegree:", "https://teamtreehouse.com/techdegree/full-stack-javascript", target: "_blank"
   .fix_height
-    = link_to "http://mathcanvas.herokuapp.com/", target: "_blank" do
-      = image_tag "mathcanvaslogo.png", alt: "math canvas", class: "no_margin_top"
+    = link_to projects_tic_tac_toe_path, target: "_blank" do
+      = image_tag "tic_tac_toe.png", alt: "tic-tac-toe", class: "no_margin_top"
     %p.project_link
-      = link_to "Math Canvas", "http://mathcanvas.herokuapp.com", target: "_blank"
-    %p.project_explanation Site where students can draw out solutions to math problems, using artwork to illustrate their individual thinking processes.  Created in Ruby on Rails, integrating my HTML5 canvas and jQuery drawing.
+      = link_to "Tic-Tac-Toe", projects_tic_tac_toe_path, target: "_blank"
+    %p.project_explanation JavaScript tic-tac-toe game. Play against a friend or the computer!
   .fix_height
     = link_to "http://mathcanvas.herokuapp.com/", target: "_blank" do
       = image_tag "mathcanvaslogo.png", alt: "math canvas", class: "no_margin_top"
