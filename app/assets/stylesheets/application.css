@@ -166,6 +166,11 @@ h3.project_title {
   text-decoration: underline;
   font-size: 1.3em;
   clear: both;
+  line-height: 1.5;
+}
+
+h3.project_title:not(:first-child) {
+  padding-top: 10px;
 }
 
 div#main_content p.project_link, div#main_content p.project_explanation {
@@ -201,6 +206,7 @@ div#main_content div.fix_height a img.no_margin_top {
 .next {
   float: right;
   margin-right: 50px;
+  margin-top: -10px;
 }
 
 .previous {

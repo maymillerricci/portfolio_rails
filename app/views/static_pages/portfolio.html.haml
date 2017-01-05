@@ -12,7 +12,9 @@
     %p.project_link
       = link_to "First Draft of Drawing App", projects_canvas_draw_path, target: "_blank"
     %p.project_explanation Created using HTML5 canvas, jQuery, jQuery UI, and jQuery mobile to also work on touchscreen devices.
-  %h3.project_title Here are a few of my favorite assignments from Coding Dojo:
+  %h3.project_title
+    Here are a couple of my favorite assignments from
+    = link_to "Coding Dojo:", "http://www.codingdojo.com", target: "_blank"
   .fix_height
     = link_to projects_periodic_table_path, target: "_blank" do
       = image_tag "periodic_table.png", alt: "periodic table", class: "no_margin_top"
