@@ -62,7 +62,7 @@ h2 {
   text-decoration: underline;
 }
 
-#sidebar, #main_content, #footer {
+#sidebar, .main_content, #footer {
   font-family: "Donegal One", serif;
 }
 
@@ -74,7 +74,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-#main_content {
+.main_content {
   width: 770px;
   height: 560px;
   background-color: #6D89D5;
@@ -129,7 +129,7 @@ li {
   text-align: center;
 }
 
-#main_content p {
+.main_content p {
   margin: 10px 10px 0;
   font-size: 1.2em;
   padding: 10px 35px 10px 15px;
@@ -140,18 +140,18 @@ li {
   padding: 10px 0 0;
 }
 
-#main_content p.clear {
+.main_content p.clear {
   clear: both;
 }
 
-#main_content img {
+.main_content img {
   float: left;
   margin: 10px;
   height: 80px;
   clear: both;
 }
 
-#main_content img.ninja {
+.main_content img.ninja {
   float: left;
   clear: none;
   padding: 5px 20px;
@@ -173,11 +173,11 @@ h3.project_title:not(:first-child) {
   padding-top: 10px;
 }
 
-div#main_content p.project_link, div#main_content p.project_explanation {
+div.main_content p.project_link, div.main_content p.project_explanation {
   padding: 0;
 }
 
-div#main_content p.project_explanation {
+div.main_content p.project_explanation {
   font-size: 1em;
   padding-bottom: 10px;
   float: left;
@@ -185,7 +185,7 @@ div#main_content p.project_explanation {
   margin-left: 2px;
 }
 
-div#main_content div.fix_height a img.no_margin_top {
+div.main_content div.fix_height a img.no_margin_top {
   margin-top: 2px;
 }
 
@@ -215,6 +215,6 @@ div#main_content div.fix_height a img.no_margin_top {
   margin-top: 40px;
 }
 
-.space_out {
+#portfolio_techdegree .fix_height {
   margin: 40px 0;
 }
