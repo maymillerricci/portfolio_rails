@@ -212,5 +212,9 @@ div#main_content div.fix_height a img.no_margin_top {
 .previous {
   float: left;
   margin-left: 30px;
-  margin-top: 20px;
+  margin-top: 40px;
+}
+
+.space_out {
+  margin: 40px 0;
 }
