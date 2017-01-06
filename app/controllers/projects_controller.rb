@@ -26,4 +26,7 @@ class ProjectsController < ApplicationController
 
   def tic_tac_toe
   end
+
+  def movie_search
+  end
 end

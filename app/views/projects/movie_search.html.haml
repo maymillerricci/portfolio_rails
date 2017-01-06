@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %title Movie Search
+    %link{:href => "https://fonts.googleapis.com/css?family=Roboto:400,500,700", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+  %body#movie_search
+    .main-header
+      .inner
+        %h1.main-title MovieSearch
+        %form.search-form
+          %label.is-hidden{:for => "search"} Search a title
+          %input#search{:name => "search", :placeholder => "Search a Title...", :type => "search"}/
+          %label.is-hidden{:for => "year"} Any Year
+          %input#year{:maxlength => "4", :name => "year", :placeholder => "Year", :type => "text"}/
+          %button#submit.search-button{:type => "submit"}
+            %i.material-icons.icn-search search
+    .main-content.clearfix
+      %ul#movies.movie-list
+        / movie list gets filled in here
+      #movie-details
+        / movie details get filled in here
+    = javascript_include_tag "application", "data-turbolinks-track" => true
