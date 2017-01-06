@@ -9,11 +9,14 @@
       = link_to "Tic-Tac-Toe", projects_tic_tac_toe_path, target: "_blank"
     %p.project_explanation JavaScript tic-tac-toe game. Play against a friend or the computer!
   .fix_height
-    = link_to "http://mathcanvas.herokuapp.com/", target: "_blank" do
-      = image_tag "mathcanvaslogo.png", alt: "math canvas", class: "no_margin_top"
+    = link_to projects_movie_search_path, target: "_blank" do
+      = image_tag "movie_search.png", alt: "movie search", class: "no_margin_top"
     %p.project_link
-      = link_to "Math Canvas", "http://mathcanvas.herokuapp.com", target: "_blank"
-    %p.project_explanation Site where students can draw out solutions to math problems, using artwork to illustrate their individual thinking processes.  Created in Ruby on Rails, integrating my HTML5 canvas and jQuery drawing.
+      = link_to "Movie Search", projects_movie_search_path, target: "_blank"
+    %p.project_explanation
+      Search for movie details via the
+      = link_to "Open Movie Database (OMDb) API", "http://www.omdbapi.com/", target: "_blank"
+      utilizing JavaScript and AJAX.
   .fix_height
     = link_to "http://mathcanvas.herokuapp.com/", target: "_blank" do
       = image_tag "mathcanvaslogo.png", alt: "math canvas", class: "no_margin_top"
