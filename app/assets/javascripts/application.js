@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require jquery-ui/tooltip
+//= require jquery-ui/widgets/tooltip
 //= require turbolinks
 //= require_tree .
 
